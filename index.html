@@ -583,6 +583,18 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script>
+    // Close the collapsed menu when a nav-link is clicked
+    document.querySelectorAll('.nav-link').forEach(function(elem) {
+        elem.addEventListener('click', function () {
+            var navbarCollapse = document.getElementById('navbarCollapse');
+            var bootstrapNavToggler = document.querySelector('.navbar-toggler');
+            if (navbarCollapse.classList.contains('show')) {
+                bootstrapNavToggler.click();
+            }
+        });
+    });
+</script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
